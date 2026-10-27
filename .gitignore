@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# CLion / JetBrains
+.idea/
+
+# CMake / build outputs
+build/
+cmake-build-*/
+out/
+dist/
+vcpkg_installed/
+compile_commands.json
+CMakeUserPresets.json
+
+# Logs and local environment
+*.log
+.env
+.env.*
+!.env.example
+
+# VS Code: keep shared project configuration
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json

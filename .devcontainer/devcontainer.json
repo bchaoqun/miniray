@@ -1,0 +1,40 @@
+{
+  "name": "C++20 + Python 3.12 + vcpkg (prebuilt)",
+  "image": "cpp-project-dev:2026-10-26-vcpkg-817892b",
+  "workspaceFolder": "/workspaces/cpp-project",
+  "remoteUser": "root",
+  "containerEnv": {
+    "VCPKG_ROOT": "/opt/vcpkg",
+    "VCPKG_DEFAULT_TRIPLET": "x64-linux",
+    "CMAKE_TOOLCHAIN_FILE": "/opt/vcpkg/scripts/buildsystems/vcpkg.cmake",
+    "HTTP_PROXY": "http://127.0.0.1:7897",
+    "HTTPS_PROXY": "http://127.0.0.1:7897",
+    "ALL_PROXY": "http://127.0.0.1:7897",
+    "NO_PROXY": "localhost,127.0.0.1,::1,mirrors.aliyun.com",
+    "http_proxy": "http://127.0.0.1:7897",
+    "https_proxy": "http://127.0.0.1:7897",
+    "all_proxy": "http://127.0.0.1:7897",
+    "no_proxy": "localhost,127.0.0.1,::1,mirrors.aliyun.com"
+  },
+  "mounts": [
+    {
+      "type": "volume",
+      "source": "cpp-project-vcpkg-binary-cache",
+      "target": "/root/.cache/vcpkg"
+    }
+  ],
+  "runArgs": [
+    "--network=host"
+  ],
+  "customizations": {
+    "jetbrains": {
+      "settings": {
+        "com.intellij:app:HttpConfigurable.proxy_host": "127.0.0.1",
+        "com.intellij:app:HttpConfigurable.proxy_port": 10808,
+        "com.intellij:app:HttpConfigurable.proxy_exceptions": "",
+        "com.intellij:app:HttpConfigurable.pac_url": "",
+        "com.intellij:app:VcsApplicationSettings.commit_from_local_changes": false
+      }
+    }
+  }
+}
