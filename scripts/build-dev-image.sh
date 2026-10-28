@@ -2,7 +2,7 @@
 set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-image="${IMAGE:-cpp-project-dev:2026-10-26-vcpkg-817892b}"
+image="${IMAGE:-cpp-project-dev:2026-10-28-vscode-clangd}"
 platform="${PLATFORM:-linux/amd64}"
 python_image="${PYTHON_IMAGE:-python:3.12-trixie}"
 vcpkg_ref="${VCPKG_REF:-817892b0ecbc6af994dd6df999c73faf795adbf2}"

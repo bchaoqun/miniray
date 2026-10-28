@@ -1,0 +1,29 @@
+{
+  "cmake.generator": "Ninja",
+  "cmake.buildDirectory": "${workspaceFolder}/build",
+  "cmake.configureOnOpen": true,
+  "cmake.configureSettings": {
+    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+  },
+  "clangd.path": "/usr/bin/clangd",
+  "clangd.arguments": [
+    "--all-scopes-completion",
+    "--background-index",
+    "--clang-tidy",
+    "--clang-tidy-checks=performance-*,bugprone-*,misc-*,modernize-*,readability-*,portability-*",
+    "--compile-commands-dir=${workspaceFolder}/build",
+    "--completion-style=detailed",
+    "--enable-config",
+    "--fallback-style=LLVM",
+    "--function-arg-placeholders",
+    "--header-insertion=iwyu",
+    "--pch-storage=disk",
+    "--ranking-model=decision_forest",
+    "-j=8"
+  ],
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.wordBasedSuggestions": "off"
+  }
+}

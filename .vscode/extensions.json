@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "llvm-vs-code-extensions.vscode-clangd",
+    "ms-vscode.cmake-tools",
+    "vadimcn.vscode-lldb",
+    "twxs.cmake",
+    "cschlosser.doxdocgen",
+    "editorconfig.editorconfig",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "charliermarsh.ruff",
+    "meta.pyrefly",
+    "mhutchie.git-graph",
+    "tamasfe.even-better-toml"
+  ]
+}

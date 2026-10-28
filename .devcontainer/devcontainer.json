@@ -1,7 +1,7 @@
 {
-  "name": "C++20 + Python 3.12 + vcpkg (prebuilt)",
-  "image": "cpp-project-dev:2026-10-26-vcpkg-817892b",
-  "workspaceFolder": "/workspaces/cpp-project",
+  "name": "MiniRay C++20 + Python 3.12",
+  "image": "cpp-project-dev:2026-10-28-vscode-clangd",
+  "workspaceFolder": "/workspaces/miniray",
   "remoteUser": "root",
   "containerEnv": {
     "VCPKG_ROOT": "/opt/vcpkg",
@@ -27,14 +27,21 @@
     "--network=host"
   ],
   "customizations": {
-    "jetbrains": {
-      "settings": {
-        "com.intellij:app:HttpConfigurable.proxy_host": "127.0.0.1",
-        "com.intellij:app:HttpConfigurable.proxy_port": 10808,
-        "com.intellij:app:HttpConfigurable.proxy_exceptions": "",
-        "com.intellij:app:HttpConfigurable.pac_url": "",
-        "com.intellij:app:VcsApplicationSettings.commit_from_local_changes": false
-      }
+    "vscode": {
+      "extensions": [
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-vscode.cmake-tools",
+        "vadimcn.vscode-lldb",
+        "twxs.cmake",
+        "cschlosser.doxdocgen",
+        "editorconfig.editorconfig",
+        "ms-python.python",
+        "ms-python.debugpy",
+        "charliermarsh.ruff",
+        "meta.pyrefly",
+        "mhutchie.git-graph",
+        "tamasfe.even-better-toml"
+      ]
     }
   }
 }

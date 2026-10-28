@@ -82,6 +82,12 @@ RUN echo "vcpkg layer: ${VCPKG_CACHE_BUST}" \
     && ninja --version \
     && python --version
 
+# VS Code C++ language server. Keep this after the vcpkg layer so image rebuilds
+# can reuse the cached vcpkg installation.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends clangd \
+    && rm -rf /var/lib/apt/lists/*
+
 ENV VCPKG_ROOT=/opt/vcpkg \
     VCPKG_DEFAULT_TRIPLET=x64-linux \
     CMAKE_TOOLCHAIN_FILE=/opt/vcpkg/scripts/buildsystems/vcpkg.cmake
